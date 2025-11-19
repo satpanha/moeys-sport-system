@@ -46,22 +46,22 @@ export const POSITIONS = [
 ]
 
 export const SPORT_CATEGORIES = [
-  { id: 'traditional', name: 'Traditional Cambodian Sports & Games' },
+  { id: 'traditional', name: 'Tranditional Sport' },
   { id: 'ball', name: 'Ball Games' },
-  { id: 'martial', name: 'Martial Arts & Combat Sports' },
-  { id: 'athletics', name: 'Athletics & Outdoor Sports' },
-  { id: 'indoor', name: 'Indoor & Recreational Sports' },
+  { id: 'martial', name: 'Martial Arts' },
+  { id: 'athletics', name: 'Athletics' },
+  { id: 'indoor', name: 'Recreational Sport' },
 ]
 
 export const SPORTS = [
-  // Traditional Cambodian Sports & Games
-  { value: 'chol-chhoung', label: 'Chol Chhoung', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'leak-kanseng', label: 'Leak Kanseng', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'teanh-prot', label: 'Teanh Prot', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'bos-angkunh', label: 'Bos Angkunh', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'bay-khom', label: 'Bay Khom', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'ouk-chatrang', label: 'Ouk Chatrang (Khmer Chess)', category: 'Traditional Cambodian Sports & Games' },
-  { value: 'klah-klok', label: 'Klah Klok', category: 'Traditional Cambodian Sports & Games' },
+  // Tranditional Sport
+  { value: 'chol-chhoung', label: 'Chol Chhoung', category: 'Tranditional Sport' },
+  { value: 'leak-kanseng', label: 'Leak Kanseng', category: 'Tranditional Sport' },
+  { value: 'teanh-prot', label: 'Teanh Prot', category: 'Tranditional Sport' },
+  { value: 'bos-angkunh', label: 'Bos Angkunh', category: 'Tranditional Sport' },
+  { value: 'bay-khom', label: 'Bay Khom', category: 'Tranditional Sport' },
+  { value: 'ouk-chatrang', label: 'Ouk Chatrang (Khmer Chess)', category: 'Tranditional Sport' },
+  { value: 'klah-klok', label: 'Klah Klok', category: 'Tranditional Sport' },
 
   // Ball Games
   { value: 'football', label: 'Football', category: 'Ball Games' },
@@ -72,45 +72,45 @@ export const SPORTS = [
   { value: 'table-tennis-ball', label: 'Table Tennis', category: 'Ball Games' },
   { value: 'handball', label: 'Handball', category: 'Ball Games' },
 
-  // Martial Arts & Combat Sports
-  { value: 'bokator', label: 'Bokator', category: 'Martial Arts & Combat Sports' },
-  { value: 'kun-khmer', label: 'Kun Khmer', category: 'Martial Arts & Combat Sports' },
-  { value: 'taekwondo', label: 'Taekwondo', category: 'Martial Arts & Combat Sports' },
-  { value: 'karate', label: 'Karate', category: 'Martial Arts & Combat Sports' },
-  { value: 'judo', label: 'Judo', category: 'Martial Arts & Combat Sports' },
-  { value: 'wrestling', label: 'Wrestling', category: 'Martial Arts & Combat Sports' },
+  // Martial Arts
+  { value: 'bokator', label: 'Bokator', category: 'Martial Arts' },
+  { value: 'kun-khmer', label: 'Kun Khmer', category: 'Martial Arts' },
+  { value: 'taekwondo', label: 'Taekwondo', category: 'Martial Arts' },
+  { value: 'karate', label: 'Karate', category: 'Martial Arts' },
+  { value: 'judo', label: 'Judo', category: 'Martial Arts' },
+  { value: 'wrestling', label: 'Wrestling', category: 'Martial Arts' },
 
-  // Athletics & Outdoor Sports
-  { value: 'running', label: 'Running', category: 'Athletics & Outdoor Sports' },
-  { value: 'cycling', label: 'Cycling', category: 'Athletics & Outdoor Sports' },
-  { value: 'swimming', label: 'Swimming', category: 'Athletics & Outdoor Sports' },
-  { value: 'badminton-outdoor', label: 'Badminton (Outdoor)', category: 'Athletics & Outdoor Sports' },
-  { value: 'hiking', label: 'Hiking', category: 'Athletics & Outdoor Sports' },
-  { value: 'archery', label: 'Archery', category: 'Athletics & Outdoor Sports' },
-  { value: 'boat-racing', label: 'Boat Racing', category: 'Athletics & Outdoor Sports' },
-  { value: 'tennis', label: 'Tennis', category: 'Athletics & Outdoor Sports' },
-  { value: 'golf', label: 'Golf', category: 'Athletics & Outdoor Sports' },
+  // Athletics
+  { value: 'running', label: 'Running', category: 'Athletics' },
+  { value: 'cycling', label: 'Cycling', category: 'Athletics' },
+  { value: 'swimming', label: 'Swimming', category: 'Athletics' },
+  { value: 'badminton-outdoor', label: 'Badminton (Outdoor)', category: 'Athletics' },
+  { value: 'hiking', label: 'Hiking', category: 'Athletics' },
+  { value: 'archery', label: 'Archery', category: 'Athletics' },
+  { value: 'boat-racing', label: 'Boat Racing', category: 'Athletics' },
+  { value: 'tennis', label: 'Tennis', category: 'Athletics' },
+  { value: 'golf', label: 'Golf', category: 'Athletics' },
 
-  // Indoor & Recreational Sports
-  { value: 'badminton-indoor', label: 'Badminton (Indoor)', category: 'Indoor & Recreational Sports' },
-  { value: 'table-tennis-indoor', label: 'Table Tennis', category: 'Indoor & Recreational Sports' },
-  { value: 'bowling', label: 'Bowling', category: 'Indoor & Recreational Sports' },
-  { value: 'chess', label: 'Chess', category: 'Indoor & Recreational Sports' },
-  { value: 'billiards', label: 'Billiards', category: 'Indoor & Recreational Sports' },
-  { value: 'e-sports', label: 'E-sports', category: 'Indoor & Recreational Sports' },
-  { value: 'gym-fitness', label: 'Gym & Fitness', category: 'Indoor & Recreational Sports' },
-  { value: 'yoga', label: 'Yoga', category: 'Indoor & Recreational Sports' },
-  { value: 'dance-fitness', label: 'Dance Fitness', category: 'Indoor & Recreational Sports' },
-  { value: 'indoor-climbing', label: 'Indoor Climbing', category: 'Indoor & Recreational Sports' },
+  // Recreational Sport
+  { value: 'badminton-indoor', label: 'Badminton (Indoor)', category: 'Recreational Sport' },
+  { value: 'table-tennis-indoor', label: 'Table Tennis', category: 'Recreational Sport' },
+  { value: 'bowling', label: 'Bowling', category: 'Recreational Sport' },
+  { value: 'chess', label: 'Chess', category: 'Recreational Sport' },
+  { value: 'billiards', label: 'Billiards', category: 'Recreational Sport' },
+  { value: 'e-sports', label: 'E-sports', category: 'Recreational Sport' },
+  { value: 'gym-fitness', label: 'Gym & Fitness', category: 'Recreational Sport' },
+  { value: 'yoga', label: 'Yoga', category: 'Recreational Sport' },
+  { value: 'dance-fitness', label: 'Dance Fitness', category: 'Recreational Sport' },
+  { value: 'indoor-climbing', label: 'Indoor Climbing', category: 'Recreational Sport' },
 ]
 
 // Note: sportsByCategory is now deprecated, use SPORTS array with category property instead
 export const sportsByCategory: Record<string, string[]> = {
-  'Traditional Cambodian Sports & Games': ['Chol Chhoung', 'Leak Kanseng', 'Teanh Prot', 'Bos Angkunh', 'Bay Khom', 'Ouk Chatrang (Khmer Chess)', 'Klah Klok'],
+  'Tranditional Sport': ['Chol Chhoung', 'Leak Kanseng', 'Teanh Prot', 'Bos Angkunh', 'Bay Khom', 'Ouk Chatrang (Khmer Chess)', 'Klah Klok'],
   'Ball Games': ['Football', 'Volleyball', 'Basketball', 'Petanque', 'Sepak Takraw', 'Table Tennis', 'Handball'],
-  'Martial Arts & Combat Sports': ['Bokator', 'Kun Khmer', 'Taekwondo', 'Karate', 'Judo', 'Wrestling', 'Muay Thai'],
-  'Athletics & Outdoor Sports': ['Running', 'Cycling', 'Swimming', 'Badminton (Outdoor)', 'Hiking', 'Archery', 'Boat Racing', 'Tennis', 'Golf'],
-  'Indoor & Recreational Sports': ['Badminton (Indoor)', 'Table Tennis', 'Bowling', 'Chess', 'Billiards', 'E-sports', 'Gym & Fitness', 'Yoga', 'Dance Fitness', 'Indoor Climbing'],
+  'Martial Arts': ['Bokator', 'Kun Khmer', 'Taekwondo', 'Karate', 'Judo', 'Wrestling', 'Muay Thai'],
+  'Athletics': ['Running', 'Cycling', 'Swimming', 'Badminton (Outdoor)', 'Hiking', 'Archery', 'Boat Racing', 'Tennis', 'Golf'],
+  'Recreational Sport': ['Badminton (Indoor)', 'Table Tennis', 'Bowling', 'Chess', 'Billiards', 'E-sports', 'Gym & Fitness', 'Yoga', 'Dance Fitness', 'Indoor Climbing'],
 }
 
 export const HEADER_BUTTONS = [

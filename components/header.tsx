@@ -3,6 +3,9 @@
 import { HeaderButton } from '@/components/common/headerButton'
 import { BurgerMenu } from '@/components/common/burgerMenu'
 import { RegistrationType } from '@/types'
+import Image from 'next/image';
+import moeysLogo from "@/assets/moeysLogo.png";
+
 
 interface HeaderProps {
   onRegistrationTypeChange: (type: RegistrationType) => void
@@ -16,11 +19,15 @@ export default function Header({ onRegistrationTypeChange, currentType }: Header
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-              {/* <span className="text-2xl">🏅</span> */}
-              {/* <img src="" alt="" /> */}
+              <Image 
+                src={moeysLogo}
+                alt="moeys logo"
+                width={120}
+                height={120}
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Ministry of Education, Youth and Sport</h1>
+              <h1 className="text-xl font-bold text-foreground">ក្រសួងអប់រំ យុវជន និងកីឡា</h1>
               <p className="text-sm text-muted-foreground">Ministry of Education, Youth and Sport</p>
             </div>
           </div>
