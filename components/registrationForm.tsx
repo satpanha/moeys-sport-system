@@ -8,6 +8,7 @@ import { PhotoUploadSection } from "./formSections/photoUpload";
 import { FormActions } from "./formSections/formActions";
 import { FormData, FormErrors, RegistrationType } from "@/types";
 import { validateForm } from "@/lib/validators";
+import { useRegister } from "@/src/hooks/useRegister";
 
 interface RegistrationFormProps {
   registrationType: RegistrationType;
@@ -26,13 +27,13 @@ export default function RegistrationForm({
     lastName: "",
     nationalID: "",
     dateOfBirth: "",
-    position: registrationType === "player" ? "player" : "",
+    position: registrationType === "athletes" ? "Leader" : "",
     phoneNumber: "",
     photoUpload: null,
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
+  const { submitRegistration, loading, error: submitError, success } = useRegister();
 
   const handleChange = (field: keyof FormData, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -42,15 +43,18 @@ export default function RegistrationForm({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newErrors = validateForm(formData, registrationType);
+    const newErrors = validateForm(formData);
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      setSubmitted(true);
-      console.log("Form submitted successfully:", formData);
-      // Send form data to server
+      try {
+        await submitRegistration(formData);
+      } catch (err) {
+        // Error is handled by the hook
+        console.error('Registration submission failed:', err);
+      }
     }
   };
 
@@ -65,12 +69,11 @@ export default function RegistrationForm({
       lastName: "",
       nationalID: "",
       dateOfBirth: "",
-      position: registrationType === "player" ? "player" : "",
+      position: registrationType === "athletes" ? "Leader" : "",
       phoneNumber: "",
       photoUpload: null,
     });
     setErrors({});
-    setSubmitted(false);
   };
 
   return (
@@ -86,10 +89,18 @@ export default function RegistrationForm({
           </p>
         </div>
 
-        {submitted && (
+        {success && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
             <p className="font-semibold">
               Registration submitted successfully!
+            </p>
+          </div>
+        )}
+
+        {submitError && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+            <p className="font-semibold">
+              Registration failed: {submitError}
             </p>
           </div>
         )}

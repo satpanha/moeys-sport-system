@@ -35,11 +35,11 @@ export function PersonalInfoSection({ formData, handleChange, errors, registrati
           <FormSelect
             label="Position"
             value={formData.position || ''}
-            onChange={(value) => handleChange('position', value)}
+            onChange={(value) => handleChange('position', value || 'player')}
             options={POSITIONS}
             required
             error={errors.position}
-            disabled={registrationType === 'player'}
+            disabled={registrationType === 'athletes'}
           />
         </div>
 

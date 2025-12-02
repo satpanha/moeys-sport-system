@@ -6,8 +6,8 @@ import '../styles/globals.css';
 
 import ClientDOMFix from './ClientDOMFix';
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"] });
+const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Registration Form - Ministry of Education, Youth & Sport',
@@ -39,7 +39,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body >
         <ClientDOMFix />   {/* Runs on client only */}
         {children}
         <Analytics />

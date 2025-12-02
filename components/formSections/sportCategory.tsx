@@ -31,7 +31,7 @@ export function SportCategorySection({ formData, handleChange, errors }: SportCa
             isSelected={formData.typeOfSport === category.name}
             onClick={() => {
               handleChange('typeOfSport', category.name)
-              handleChange('selectedSport', null) // Clear selected sport when category changes
+              handleChange('selectedSport', null ) // Clear selected sport when category changes
             }}
           />
         ))}
@@ -40,7 +40,7 @@ export function SportCategorySection({ formData, handleChange, errors }: SportCa
       <FormSelect
         label="Select Sport"
         value={formData.selectedSport || ''}
-        onChange={(value) => handleChange('selectedSport', value)}
+        onChange={(value) => handleChange('selectedSport', value || null)}
         options={filteredSports}
         required
         error={errors?.selectedSport}

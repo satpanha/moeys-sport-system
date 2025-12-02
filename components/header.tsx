@@ -43,10 +43,10 @@ export default function Header({ onRegistrationTypeChange, currentType, classNam
               Register as Leader
             </HeaderButton>
             <HeaderButton
-              variant={currentType === 'player' ? 'primary' : 'outline'}
-              onClick={() => onRegistrationTypeChange('player')}
+              variant={currentType === 'athletes' ? 'primary' : 'outline'}
+              onClick={() => onRegistrationTypeChange('athletes')}
             >
-              Register as Player
+              Register as athletes
             </HeaderButton>
           </div>
 
