@@ -212,3 +212,123 @@ export interface MedalChartData {
   bronze: number;
   total: number;
 }
+
+// ============================================
+// SCHEDULE TYPES (Task 9.2)
+// ============================================
+
+export interface Schedule {
+  id: string;
+  name: string;
+  description?: string;
+  sportId: string;
+  sportName: string;
+  startDate: string;
+  endDate: string;
+  venue: string;
+  location?: string;
+  status: 'scheduled' | 'ongoing' | 'completed' | 'cancelled';
+  createdDate: string;
+  updatedDate?: string;
+}
+
+export interface ScheduleEvent {
+  id: string;
+  scheduleId: string;
+  eventName: string;
+  eventDate: string;
+  eventTime: string;
+  venue: string;
+  participants: number;
+  status: 'scheduled' | 'ongoing' | 'completed';
+}
+
+// ============================================
+// EXPORT TYPES (Task 10.2)
+// ============================================
+
+export interface ExportData {
+  id: string;
+  type: 'athletes' | 'medals' | 'sports' | 'provinces' | 'schedules' | 'all';
+  format: 'csv' | 'excel' | 'pdf';
+  filename: string;
+  createdDate: string;
+  status: 'pending' | 'processing' | 'completed' | 'failed';
+  downloadUrl?: string;
+  fileSize?: number;
+  filters?: {
+    province?: string;
+    sport?: string;
+    dateFrom?: string;
+    dateTo?: string;
+    status?: string;
+  };
+}
+
+export interface ExportFormat {
+  type: 'csv' | 'excel' | 'pdf';
+  extension: string;
+  mimeType: string;
+}
+
+export interface ExportPreview {
+  id: string;
+  type: string;
+  format: string;
+  recordCount: number;
+  sampleData: any[];
+  totalRecords: number;
+}
+
+// ============================================
+// ADMIN TYPES (Task 11.2)
+// ============================================
+
+export interface AdminUser {
+  id: string;
+  username: string;
+  email: string;
+  role: 'superadmin' | 'admin' | 'moderator';
+  status: 'active' | 'inactive' | 'suspended';
+  createdDate: string;
+  lastLogin?: string;
+  permissions: string[];
+}
+
+export interface SystemLog {
+  id: string;
+  userId: string;
+  username: string;
+  action: string;
+  module: string;
+  details?: string;
+  timestamp: string;
+  ipAddress?: string;
+  status: 'success' | 'failed' | 'warning';
+}
+
+export interface ImportData {
+  id: string;
+  filename: string;
+  fileType: 'csv' | 'excel';
+  dataType: 'athletes' | 'sports' | 'provinces' | 'medals';
+  uploadDate: string;
+  status: 'pending' | 'processing' | 'completed' | 'failed';
+  totalRecords: number;
+  successCount: number;
+  failureCount: number;
+  errorDetails?: string;
+  uploadedBy: string;
+}
+
+export interface SubmissionHistory {
+  id: string;
+  type: 'athlete_registration' | 'medal_award' | 'sport_creation' | 'schedule_creation' | 'data_import';
+  submittedBy: string;
+  submissionDate: string;
+  data: any;
+  status: 'pending' | 'approved' | 'rejected';
+  reviewedBy?: string;
+  reviewDate?: string;
+  notes?: string;
+}

@@ -298,7 +298,7 @@
 - [ ] **Task 8.11: Build Medal History Page**
 
 ## PHASE 9: Schedule Microservice
- - [x] **Task 9.1: Create Schedule API adapter**
+- [x] **Task 9.1: Create Schedule API adapter**
 - [ ] **Task 9.2: Define Schedule TypeScript types**
 - [ ] **Task 9.3: Create Schedule data hooks**
 - [ ] **Task 9.4: Build ScheduleTable component**
